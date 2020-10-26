@@ -17,6 +17,8 @@ const generateCharacter = (characterInstruction) => {
     character.gender = gender.name;
     character.name = species.generateName(gender.name);
 
+    // TODO: Pick One talent from a combination of the standard list + the species list
+
     species.attributesToChange.forEach(attr => {
 
         switch (attr.attribute) {
