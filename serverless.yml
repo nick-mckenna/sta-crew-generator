@@ -19,7 +19,7 @@ provider:
 functions:
   crew:
     handler: handler.generate
-    # The `events` block defines how to trigger the handler.helloWorld code
+    # The `events` block defines how to trigger the handler.generate code
     events:
       - http:
           path: generate
