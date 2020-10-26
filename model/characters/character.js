@@ -2,8 +2,13 @@
 
 class Character {
 
+    constructor(mainCharacter) {
+        this.mainCharacter = mainCharacter;
+    }
+
     name = "unnamed";
-    species = "unknown";
+    species = null;
+    speciesName = "unknown";
     gender = "unknown";
 
     control = 7;
@@ -19,6 +24,11 @@ class Character {
     conn = 1;
     engineering = 1;
     medicine = 1;
+
+    traits = [];
+    talents = [];
+
+    mainCharacter = false;
 }
 
 module.exports.Character = Character;

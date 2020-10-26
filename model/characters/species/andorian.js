@@ -3,6 +3,7 @@
 const { characterAttributes } = require("../character-attributes");
 const { Species } = require("./species");
 const { getRandomInt } = require("./../../misc");
+const { Talent } = require("../talents/talent");
 
 const andorian = () => {
 
@@ -11,7 +12,7 @@ const andorian = () => {
     species.name = 'Androian';
     species.attributesToChange = [ {attribute: characterAttributes().daring, changeBy: 1}, {attribute: characterAttributes().control, changeBy: 1}, {attribute: characterAttributes().presence, changeBy: 1} ];
     species.traits = [ 'Andorian' ];
-    species.talents = [ 'Proud And Honourable', 'The Ushaan' ];
+    species.talents = [ new Talent('Proud And Honourable', 'Andorian'), new Talent('The Ushaan', 'Andorian') ];
 
     species.givenNames = ['John', 'Jane'];
     species.familyNames = ['Smith', 'Jones'];

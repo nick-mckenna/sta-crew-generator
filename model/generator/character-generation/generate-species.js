@@ -1,17 +1,25 @@
 'use strict';
 
-const { getAllSpecies } = require('../../characters/species/species-repository');
-const { getRandomInt } = require('../../misc');
+const { randomSpecies } = require('../../characters/species/species-repository');
+const { deepClone } = require('../../misc');
 
-const generateSpecies = () => {
+const generateSpecies = (sourceCharacter) => {
 
-    const allSpecies = getAllSpecies();
+    let character = deepClone(sourceCharacter);
 
-    const numberSpecies = allSpecies.length;
+    const species = randomSpecies();
+    const gender = species.generateGender();
 
-    const selected = getRandomInt(numberSpecies);
+    character.species = species;
+    character.speciesName = species.name;
+    character.gender = gender.name;
+    character.name = species.generateName(gender.name);
+    character.traits = [...character.traits, ...species.traits];
+    character.talents = [...talents, ...generateTalent(character)];
 
-    return allSpecies[selected];
+    character = modifyAttributes(character, species.attributesToChange);
+
+    return character;
 }
 
 module.exports.generateSpecies = generateSpecies;

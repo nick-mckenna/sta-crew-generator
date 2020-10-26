@@ -4,7 +4,7 @@ class CharacterInstruction {
 
     rank = "";
     favouredDisciplines = [];
-
+    mainCharacter = false;
 }
 
 const validateCharacterInstruction = (characterInstruction) => {
@@ -21,6 +21,10 @@ const validateCharacterInstruction = (characterInstruction) => {
         throw 'characterInstruction.favouredDisciplines is undefined';
     } else if (characterInstruction.favouredDisciplines === null) {
         throw 'characterInstruction.favouredDisciplines is null';
+    } else if (characterInstruction.mainCharacter === undefined) {
+        throw 'characterInstruction.mainCharacter is undefined';
+    } else if (characterInstruction.mainCharacter === null) {
+        throw 'characterInstruction.mainCharacter is null';
     }
 }
 
