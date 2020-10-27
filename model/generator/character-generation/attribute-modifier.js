@@ -1,5 +1,6 @@
 'use strict';
 
+const { characterAttributes } = require("../../characters/character-attributes");
 const { deepClone } = require("../../misc");
 
 const modifyAttributes = (sourceCharacter, modifiers) => {
@@ -39,4 +40,4 @@ const modifyAttributes = (sourceCharacter, modifiers) => {
     return character;
 }
 
-module.exports.modifierAttributes = modifyAttributes;
+module.exports.modifyAttributes = modifyAttributes;

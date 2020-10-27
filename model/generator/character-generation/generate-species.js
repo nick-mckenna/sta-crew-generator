@@ -2,6 +2,8 @@
 
 const { randomSpecies } = require('../../characters/species/species-repository');
 const { deepClone } = require('../../misc');
+const { generateTalent } = require('./generate-talent');
+const { modifyAttributes } = require('./attribute-modifier');
 
 const generateSpecies = (sourceCharacter) => {
 
@@ -15,7 +17,8 @@ const generateSpecies = (sourceCharacter) => {
     character.gender = gender.name;
     character.name = species.generateName(gender.name);
     character.traits = [...character.traits, ...species.traits];
-    character.talents = [...talents, ...generateTalent(character)];
+
+    character.talents = [...character.talents, ...[generateTalent(character)]];
 
     character = modifyAttributes(character, species.attributesToChange);
 

@@ -1,5 +1,6 @@
 'use strict';
 
+const { getRandomInt } = require("../../misc");
 const { andorian } = require("./andorian");
 
 const getAllSpecies = () => {

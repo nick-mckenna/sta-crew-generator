@@ -1,5 +1,6 @@
 'use strict';
 
+const { getRandomInt } = require("../../misc");
 const { Talent } = require("./talent");
 
 const getAllTalents = () => {
@@ -53,7 +54,7 @@ const getAllTalents = () => {
 
 const randomTalent = (additionalTalents) => {
 
-    const allTalents = [...getAllTalents, ...additionalTalents];
+    const allTalents = [...getAllTalents(), ...additionalTalents];
 
     const numberTalents = allTalents.length;
 
