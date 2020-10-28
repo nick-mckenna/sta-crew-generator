@@ -1,0 +1,24 @@
+{
+    "departments": [
+
+        {
+            "name": "medical",
+            "personnel": [
+
+                {
+                    "number": 10,
+                    "character": {
+                        "mainCharacter": false,
+                        "rank": "lieutenant",
+                        "favouredDisciplines": [
+                            "Medicine"
+                        ]
+
+                    }
+                }
+
+            ]
+        }
+
+    ]
+}
