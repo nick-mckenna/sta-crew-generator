@@ -13,6 +13,7 @@ const betazoid = () => {
     species.attributesToChange = [ {attribute: characterAttributes().insight, changeBy: 1}, {attribute: characterAttributes().presence, changeBy: 1}, {attribute: characterAttributes().reason, changeBy: 1} ];
     species.traits = [ 'Betazoid' ];
     species.talents = [ new Talent('Empath', 'Betazoid'), new Talent('Telepath', 'Betazoid') ];
+    species.speciesTalentRequired = true;
 
     species.givenNames = ['Elena', 'Mikus', 'Amulo', 'Enterio', 'Amenus', 'Andreli', 'Epeso', 'Aletia', 'Gorin', 'Elswanix'];
     species.familyNames = ['Ilius', 'Grumila', 'Erosta', 'Velen', 'Atwalsa', 'Encephix', 'Gatril', 'Valius', 'Eserio', 'Miswala'];

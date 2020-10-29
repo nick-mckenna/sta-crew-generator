@@ -18,7 +18,11 @@ const generateSpecies = (sourceCharacter) => {
     character.name = species.generateName(gender.name);
     character.traits = [...character.traits, ...species.traits];
 
-    character.talents = [...character.talents, ...[generateTalent(character)]];
+    if (species.speciesTalentRequired) {    // e.g. for Betazoids
+        character.talents = [...character.talents, ...[species.generateSpeciesTalent(character)]];
+    } else {
+        character.talents = [...character.talents, ...[generateTalent(character)]];
+    }
 
     character = modifyAttributes(character, species.attributesToChange);
 
