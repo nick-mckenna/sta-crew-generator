@@ -11,7 +11,6 @@ const generateSpecies = (sourceCharacter) => {
 
     const species = randomSpecies();
     const gender = species.generateGender();
-
     
     character.speciesName = species.name;
     character.gender = gender.name;
@@ -25,6 +24,8 @@ const generateSpecies = (sourceCharacter) => {
     }
 
     character = modifyAttributes(character, species.attributesToChange);
+
+    character.species = species;
 
     return character;
 }

@@ -2,15 +2,13 @@
 
 class Environment {
 
-    constructor(name, requirements = null, minRequirement = 0) {
-        this.name = name;
-        this.requirements = requirements;
-        this.minRequirement = minRequirement;
-    }
-
     name = '';
-    requirements = '';
-    minRequirement = 0;
+
+    // Function that takes instance of Species as a parameter
+    getAttributeToIncrease;
+
+    // Function that takes instance of Species as a parameter
+    getDisciplineToIncrease;
 }
 
-module.exports.Talent = Talent;
+module.exports.Environment = Environment;

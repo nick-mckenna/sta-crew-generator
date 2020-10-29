@@ -9,6 +9,9 @@ class Character {
     name = "unnamed";
     speciesName = "unknown";
     gender = "unknown";
+    environmentName = "unknown";
+    species = null;
+    environment = null;
 
     control = 7;
     fitness = 7;

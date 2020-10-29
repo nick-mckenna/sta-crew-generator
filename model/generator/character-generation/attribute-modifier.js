@@ -40,4 +40,39 @@ const modifyAttributes = (sourceCharacter, modifiers) => {
     return character;
 }
 
+const modifyAttribute = (sourceCharacter, attributeName) => {
+
+    let character = deepClone(sourceCharacter);
+
+    switch (attributeName) {
+
+        case characterAttributes().control:
+            character.control += 1;
+            break;
+
+        case characterAttributes().fitness:
+            character.fitness += 1;
+            break;
+
+        case characterAttributes().presence:
+            character.presence += 1;
+            break;
+
+        case characterAttributes().daring:
+            character.daring += 1;
+            break;
+
+        case characterAttributes().insight:
+            character.insight += 1;
+            break;
+
+        case characterAttributes().reason:
+            character.reason += 1;
+            break;
+    }
+    
+    return character;
+}
+
 module.exports.modifyAttributes = modifyAttributes;
+module.exports.modifyAttribute = modifyAttribute;
