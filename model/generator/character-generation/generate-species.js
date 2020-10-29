@@ -12,7 +12,7 @@ const generateSpecies = (sourceCharacter) => {
     const species = randomSpecies();
     const gender = species.generateGender();
 
-    character.species = species;
+    
     character.speciesName = species.name;
     character.gender = gender.name;
     character.name = species.generateName(gender.name);
@@ -21,7 +21,7 @@ const generateSpecies = (sourceCharacter) => {
     if (species.speciesTalentRequired) {    // e.g. for Betazoids
         character.talents = [...character.talents, ...[species.generateSpeciesTalent(character)]];
     } else {
-        character.talents = [...character.talents, ...[generateTalent(character)]];
+        character.talents = [...character.talents, ...[generateTalent(character, species.talents)]];
     }
 
     character = modifyAttributes(character, species.attributesToChange);

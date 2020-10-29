@@ -3,16 +3,16 @@
 const { characterDisciplines } = require("../../characters/character-disciplines");
 const { randomTalent } = require("../../characters/talents/talents-repository");
 
-const generateTalent = (character) => {
+const generateTalent = (character, speciesTalents) => {
 
     let found = null;
 
     do {
-        const candidate = randomTalent(character.species.talents);
+        const candidate = randomTalent(speciesTalents);
 
         if (candidate.requirements === null) {
             found = candidate;
-        } else if (candidate.requirements === character.species.name) {
+        } else if (candidate.requirements === character.speciesName) {
             found = candidate;
         } else {
 

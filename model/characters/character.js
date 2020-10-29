@@ -7,7 +7,6 @@ class Character {
     }
 
     name = "unnamed";
-    species = null;
     speciesName = "unknown";
     gender = "unknown";
 
