@@ -3,16 +3,17 @@
 const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
+const { characterAttributes } = require("../character-attributes");
 
-const homeworld = () => {
+const busyColony = () => {
 
     let environment = new Environment();
 
-    environment.name = 'Homeworld';
+    environment.name = 'Busy Colony';
     
     environment.getAttributeToIncrease = (species) => {
 
-        return species.attributesToChange[getRandomInt(species.attributesToChange.length)].attribute;
+        return [characterAttributes().daring, characterAttributes().presence];
     };
 
     environment.getDisciplineToIncrease = (species) => {
@@ -24,4 +25,4 @@ const homeworld = () => {
     return environment;
 }
 
-module.exports.homeworld = homeworld;
+module.exports.busyColony = busyColony;

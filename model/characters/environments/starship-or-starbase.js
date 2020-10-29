@@ -3,25 +3,27 @@
 const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
+const { characterAttributes } = require("../character-attributes");
 
-const homeworld = () => {
+const starshipOrStarbase = () => {
 
     let environment = new Environment();
 
-    environment.name = 'Homeworld';
+    environment.name = 'Starship Or Starbase';
     
     environment.getAttributeToIncrease = (species) => {
 
-        return species.attributesToChange[getRandomInt(species.attributesToChange.length)].attribute;
+        return [characterAttributes().control, characterAttributes().insight];
     };
 
     environment.getDisciplineToIncrease = (species) => {
 
-        const options = [ characterDisciplines().command, characterDisciplines().security, characterDisciplines().science ];
+        const options = [ characterDisciplines().conn, 
+            characterDisciplines().command, characterDisciplines().engineering ];
         return options[getRandomInt(options.length)];
     };
 
     return environment;
 }
 
-module.exports.homeworld = homeworld;
+module.exports.starshipOrStarbase = starshipOrStarbase;

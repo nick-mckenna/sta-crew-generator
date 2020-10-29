@@ -1,6 +1,6 @@
 'use strict';
 
-const { characterDisciplines } = require("../../characters/character-disciplines");
+const { characterDisciplines, randomDiscipline } = require("../../characters/character-disciplines");
 const { deepClone } = require("../../misc");
 
 const modifyDiscipline = (sourceCharacter, attributeName) => {

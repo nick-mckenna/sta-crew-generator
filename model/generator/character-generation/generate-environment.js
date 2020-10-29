@@ -1,10 +1,10 @@
 'use strict';
 
-const { randomSpecies } = require('../../characters/species/species-repository');
 const { deepClone } = require('../../misc');
 const { randomEnvironment } = require('../../characters/environments/environment-repository');
 const { modifyAttributes, modifyAttribute } = require('./attribute-modifier');
 const { modifyDiscipline } = require('./discipline-modifier');
+const { randomValue } = require('../../characters/values/value-repository');
 
 const generateEnvironment = (sourceCharacter) => {
 
@@ -22,11 +22,8 @@ const generateEnvironment = (sourceCharacter) => {
     const disciplineToIncrease = environment.getDisciplineToIncrease(character.species);
     character = modifyDiscipline(character, disciplineToIncrease);
 
-    
-    
     // 3. Generate a random value
-
-
+    character.values = [...character.values, ...[randomValue()]];
 
     character.environment = environment;
 

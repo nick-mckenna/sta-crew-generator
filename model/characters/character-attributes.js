@@ -1,7 +1,6 @@
 'use strict';
 
 const { getRandomInt } = require("../misc");
-const { characterDisciplines } = require("./character-disciplines");
 
 const characterAttributes = () => {
 

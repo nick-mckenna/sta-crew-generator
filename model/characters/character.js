@@ -12,7 +12,7 @@ class Character {
     environmentName = "unknown";
     species = null;
     environment = null;
-
+    
     control = 7;
     fitness = 7;
     presence = 7;
@@ -29,6 +29,7 @@ class Character {
 
     traits = [];
     talents = [];
+    values = [];
 
     mainCharacter = false;
 }

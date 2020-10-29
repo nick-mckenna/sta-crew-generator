@@ -1,6 +1,6 @@
 'use strict';
 
-const { randomSpecies } = require('../../characters/species/species-repository');
+const { randomSpecies, otherRandomSpecies } = require('../../characters/species/species-repository');
 const { deepClone } = require('../../misc');
 const { generateTalent } = require('./generate-talent');
 const { modifyAttributes } = require('./attribute-modifier');

@@ -1,6 +1,6 @@
 'use strict';
 
-const { characterDisciplines } = require("../../characters/character-disciplines");
+const { characterDisciplines, randomDiscipline } = require("../../characters/character-disciplines");
 const { randomTalent } = require("../../characters/talents/talents-repository");
 
 const generateTalent = (character, speciesTalents) => {

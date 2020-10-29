@@ -3,25 +3,27 @@
 const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
+const { characterAttributes } = require("../character-attributes");
 
-const homeworld = () => {
+const isolatedColony = () => {
 
     let environment = new Environment();
 
-    environment.name = 'Homeworld';
+    environment.name = 'Isolated Colony';
     
     environment.getAttributeToIncrease = (species) => {
 
-        return species.attributesToChange[getRandomInt(species.attributesToChange.length)].attribute;
+        return [characterAttributes().reason, characterAttributes().insight];
     };
 
     environment.getDisciplineToIncrease = (species) => {
 
-        const options = [ characterDisciplines().command, characterDisciplines().security, characterDisciplines().science ];
+        const options = [ characterDisciplines().engineering, 
+            characterDisciplines().science, characterDisciplines().medicine ];
         return options[getRandomInt(options.length)];
     };
 
     return environment;
 }
 
-module.exports.homeworld = homeworld;
+module.exports.isolatedColony = isolatedColony;

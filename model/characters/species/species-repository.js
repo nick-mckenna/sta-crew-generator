@@ -64,4 +64,21 @@ const randomSpecies = () => {
     return allSpecies[selected];
 }
 
+const otherRandomSpecies = (excludeSpecies) => {
+
+    let found = null;
+
+    do {
+
+        const candidate = randomSpecies();
+        if (candidate.name !== excludeSpecies.name) {
+            found = candidate;
+        }
+
+    } while (found == null);
+
+    return found;
+}
+
 module.exports.randomSpecies = randomSpecies;
+module.exports.otherRandomSpecies = otherRandomSpecies;
