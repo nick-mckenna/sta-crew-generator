@@ -9,7 +9,7 @@ const vulcan = () => {
 
     let species = new Species();
 
-    species.name = 'vulcan';
+    species.name = 'Vulcan';
     species.attributesToChange = [ {attribute: characterAttributes().control, changeBy: 1}, {attribute: characterAttributes().fitness, changeBy: 1}, {attribute: characterAttributes().reason, changeBy: 1} ];
     species.traits = [ 'Vulcan' ];
     species.talents = [ new Talent('Kolinahr', 'Vulcan'), new Talent('Mind-Meld', 'Vulcan'), new Talent('Nerve Pinch', 'Vulcan') ];

@@ -9,7 +9,7 @@ const trill = () => {
 
     let species = new Species();
 
-    species.name = 'trill';
+    species.name = 'Trill';
     species.attributesToChange = [ {attribute: characterAttributes().control, changeBy: 1}, {attribute: characterAttributes().presence, changeBy: 1}, {attribute: characterAttributes().reason, changeBy: 1} ];
     species.traits = [ 'Trill' ];
     species.talents = [ new Talent('Former Initiate', 'Trill'), new Talent('Joined', 'Trill') ];

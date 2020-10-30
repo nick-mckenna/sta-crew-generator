@@ -3,7 +3,6 @@
 const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
-const { randomValue } = require("../values/value-repository");
 const { otherRandomSpecies } = require("../species/species-repository");
 
 const anotherSpeciesWorld = () => {
@@ -12,10 +11,10 @@ const anotherSpeciesWorld = () => {
 
     environment.name = 'Another Species\' World';
     
-    
     environment.getAttributeToIncrease = (species) => {
 
         const randomSpecies = otherRandomSpecies(species);
+        environment.otherWorld = randomSpecies.name;
         return randomSpecies.attributesToChange[getRandomInt(species.attributesToChange.length)].attribute;
     };
 

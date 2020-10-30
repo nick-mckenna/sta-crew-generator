@@ -9,7 +9,7 @@ const human = () => {
 
     let species = new Species();
 
-    species.name = 'human';
+    species.name = 'Human';
 
     species.attributesToChange = [];
     let selectedAttributes = [];

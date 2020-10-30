@@ -9,7 +9,7 @@ const denobulan = () => {
 
     let species = new Species();
 
-    species.name = 'denobulan';
+    species.name = 'Denobulan';
     species.attributesToChange = [ {attribute: characterAttributes().fitness, changeBy: 1}, {attribute: characterAttributes().insight, changeBy: 1}, {attribute: characterAttributes().reason, changeBy: 1} ];
     species.traits = [ 'Denobulan' ];
     species.talents = [ new Talent('Orb Experience', 'Denobulan'), new Talent('Strong Pagh', 'Denobulan') ];

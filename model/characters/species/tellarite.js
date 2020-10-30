@@ -9,7 +9,7 @@ const tellarite = () => {
 
     let species = new Species();
 
-    species.name = 'tellarite';
+    species.name = 'Tellarite';
     species.attributesToChange = [ {attribute: characterAttributes().control, changeBy: 1}, {attribute: characterAttributes().fitness, changeBy: 1}, {attribute: characterAttributes().insight, changeBy: 1} ];
     species.traits = [ 'Tellarite' ];
     species.talents = [ new Talent('Incisive Scrutiny', 'Tellarite'), new Talent('Sturdy', 'Tellarite') ];
