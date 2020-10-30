@@ -13,7 +13,8 @@ const starshipOrStarbase = () => {
     
     environment.getAttributeToIncrease = (species) => {
 
-        return [characterAttributes().control, characterAttributes().insight];
+        const attributes = [characterAttributes().control, characterAttributes().insight];
+        return attributes[getRandomInt(attributes.length)];
     };
 
     environment.getDisciplineToIncrease = (species) => {

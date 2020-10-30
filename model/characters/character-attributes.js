@@ -45,5 +45,22 @@ const randomAttribute = () => {
     return attribute;
 }
 
+const randomAttributeExclude = (excludeThese) => {
+
+    let found = null;
+
+    do {
+
+        let candidate = randomAttribute();
+        if (excludeThese.includes(candidate) === false) {
+            found = candidate;
+        }
+
+    } while (found == null);
+
+    return found;
+}
+
 module.exports.characterAttributes = characterAttributes;
 module.exports.randomAttribute = randomAttribute;
+module.exports.randomAttributeExclude = randomAttributeExclude;

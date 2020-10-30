@@ -13,7 +13,8 @@ const busyColony = () => {
     
     environment.getAttributeToIncrease = (species) => {
 
-        return [characterAttributes().daring, characterAttributes().presence];
+        const attributes = [characterAttributes().daring, characterAttributes().presence];
+        return attributes[getRandomInt(attributes.length)];
     };
 
     environment.getDisciplineToIncrease = (species) => {

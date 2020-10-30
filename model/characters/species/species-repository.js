@@ -13,6 +13,7 @@ const { vulcan } = require("./vulcan");
 const getSpeciesDistribution = () => {
 
     return [
+        /*
         andorian(),
         andorian(),
         bajoran(),
@@ -33,6 +34,8 @@ const getSpeciesDistribution = () => {
         trill(),
         vulcan(),
         vulcan()
+        */
+       human()
     ];
     
 }

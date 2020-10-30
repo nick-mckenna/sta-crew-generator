@@ -97,7 +97,7 @@ const allValues = [
     'Welcome those who have nothing as they have the most to offer',
     'Nothing is as it seems',
     'When the world is exploding around you, focus on the job in front of you',
-    'It\'s a game of risk if you\'re going to sit in tht chair',
+    'It\'s a game of risk if you\'re going to sit in that chair',
     'Being right is the most important thing',
     'I\'ll take care of my friends if it kills me',
     'If everyone would just follow my instructions, this would go a lot better',

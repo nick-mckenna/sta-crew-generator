@@ -1,5 +1,7 @@
 'use strict';
 
+const { getRandomInt } = require("../misc");
+
 const characterDisciplines = () => {
 
     return {

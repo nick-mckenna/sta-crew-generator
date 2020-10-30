@@ -13,7 +13,8 @@ const isolatedColony = () => {
     
     environment.getAttributeToIncrease = (species) => {
 
-        return [characterAttributes().reason, characterAttributes().insight];
+        const attributes = [characterAttributes().reason, characterAttributes().insight];
+        return attributes[getRandomInt(attributes.length)];
     };
 
     environment.getDisciplineToIncrease = (species) => {

@@ -1,6 +1,6 @@
 'use strict';
 
-const { characterAttributes, randomAttribute } = require("../character-attributes");
+const { characterAttributes, randomAttribute, randomAttributeExclude } = require("../character-attributes");
 const { Species } = require("./species");
 const { getRandomInt } = require("./../../misc");
 const { Talent } = require("../talents/talent");
@@ -10,7 +10,16 @@ const human = () => {
     let species = new Species();
 
     species.name = 'human';
-    species.attributesToChange = [ {attribute: randomAttribute(), changeBy: 1}, {attribute: randomAttribute(), changeBy: 1}, {attribute: randomAttribute(), changeBy: 1} ];
+
+    species.attributesToChange = [];
+    let selectedAttributes = [];
+    for (let i = 0; i < 3; i++) {
+
+        let nextRandom = randomAttributeExclude(selectedAttributes);
+        selectedAttributes.push(nextRandom);
+        species.attributesToChange.push({ attribute: nextRandom, changeBy: 1 });
+    }
+    
     species.traits = [ 'Human' ];
     species.talents = [ new Talent('Resolute', 'Human'), new Talent('Spirit Of Discovery', 'Human') ];
 

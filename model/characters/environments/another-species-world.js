@@ -4,6 +4,7 @@ const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
 const { randomValue } = require("../values/value-repository");
+const { otherRandomSpecies } = require("../species/species-repository");
 
 const anotherSpeciesWorld = () => {
 

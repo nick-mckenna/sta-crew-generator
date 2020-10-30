@@ -13,7 +13,8 @@ const frontierColony = () => {
     
     environment.getAttributeToIncrease = (species) => {
 
-        return [characterAttributes().control, characterAttributes().fitness];
+        const attributes = [characterAttributes().control, characterAttributes().fitness];
+        return attributes[getRandomInt(attributes.length)];
     };
 
     environment.getDisciplineToIncrease = (species) => {
