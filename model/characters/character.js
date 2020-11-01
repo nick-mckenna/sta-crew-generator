@@ -10,8 +10,11 @@ class Character {
     speciesName = "unknown";
     gender = "unknown";
     environmentName = "unknown";
+    upbringingName = "unknown";
+    upbringingStatus = "unknown";
     species = null;
     environment = null;
+    upbringing = null;
     
     control = 7;
     fitness = 7;
@@ -30,6 +33,7 @@ class Character {
     traits = [];
     talents = [];
     values = [];
+    focuses = [];
 
     mainCharacter = false;
 }
