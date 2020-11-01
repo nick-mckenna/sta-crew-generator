@@ -4,8 +4,10 @@ const { getRandomInt } = require("../../misc");
 
 const acceptanceOptions = () => {
 
-    accepted = 'Accepted';
-    rebelled = 'Rebelled';
+    return {
+        accepted: 'Accepted',
+        rebelled: 'Rebelled'
+    }
 }
 
 const randomAcceptanceOption = () => {

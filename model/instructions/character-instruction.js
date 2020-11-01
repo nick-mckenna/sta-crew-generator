@@ -3,6 +3,7 @@
 class CharacterInstruction {
 
     rank = "";
+    rankType = "";
     favouredDisciplines = [];
     mainCharacter = false;
 }
