@@ -12,9 +12,14 @@ class Character {
     environmentName = "unknown";
     upbringingName = "unknown";
     upbringingStatus = "unknown";
+    academyTrackName = "unknown";
     species = null;
     environment = null;
     upbringing = null;
+    academyTrack = null;
+
+    major = 'unknown';
+    minors = [];
     
     control = 7;
     fitness = 7;

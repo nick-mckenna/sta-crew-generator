@@ -108,8 +108,19 @@ const allValues = [
     'A well-organised environment is critical to success'
 ];
 
-const randomValue = () => {
-    return allValues[getRandomInt(allValues.length)];
+const randomValue = (currentValues) => {
+
+    let found = null;
+
+    while (found == null) {
+        let candidate = allValues[getRandomInt(allValues.length)];
+
+        if (currentValues.includes(candidate) == false) {
+            found = candidate;
+        }
+    }
+
+    return [...found, ...currentValues];
 }
 
 module.exports.randomValue = randomValue;

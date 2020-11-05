@@ -23,7 +23,7 @@ const generateEnvironment = (sourceCharacter) => {
     character = modifyDiscipline(character, disciplineToIncrease);
 
     // 3. Generate a random value
-    character.values = [...character.values, ...[randomValue()]];
+    character.values = randomValue(character.values);
 
     character.environment = environment;
 

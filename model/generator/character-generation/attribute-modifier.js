@@ -40,34 +40,34 @@ const modifyAttributes = (sourceCharacter, modifiers) => {
     return character;
 }
 
-const modifyAttribute = (sourceCharacter, attributeName) => {
+const modifyAttribute = (sourceCharacter, attributeName, increment = 1) => {
 
     let character = deepClone(sourceCharacter);
 
     switch (attributeName) {
 
         case characterAttributes().control:
-            character.control += 1;
+            character.control += increment;
             break;
 
         case characterAttributes().fitness:
-            character.fitness += 1;
+            character.fitness += increment;
             break;
 
         case characterAttributes().presence:
-            character.presence += 1;
+            character.presence += increment;
             break;
 
         case characterAttributes().daring:
-            character.daring += 1;
+            character.daring += increment;
             break;
 
         case characterAttributes().insight:
-            character.insight += 1;
+            character.insight += increment;
             break;
 
         case characterAttributes().reason:
-            character.reason += 1;
+            character.reason += increment;
             break;
     }
     

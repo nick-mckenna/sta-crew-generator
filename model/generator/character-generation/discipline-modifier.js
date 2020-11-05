@@ -3,34 +3,52 @@
 const { characterDisciplines, randomDiscipline } = require("../../characters/character-disciplines");
 const { deepClone } = require("../../misc");
 
-const modifyDiscipline = (sourceCharacter, attributeName) => {
+const modifyDiscipline = (sourceCharacter, attributeName, increment = 1, max = 999) => {
 
     let character = deepClone(sourceCharacter);
 
     switch (attributeName) {
 
         case characterDisciplines().command:
-            character.command += 1;
+            character.command += increment;
+            if (character.command > max) {
+                character = null;
+            }
             break;
 
         case characterDisciplines().conn:
-            character.conn += 1;
+            character.conn += increment;
+            if (character.conn > max) {
+                character = null;
+            }
             break;
 
         case characterDisciplines().security:
-            character.security += 1;
+            character.security += increment;
+            if (character.security > max) {
+                character = null;
+            }
             break;
 
         case characterDisciplines().engineering:
-            character.engineering += 1;
+            character.engineering += increment;
+            if (character.engineering > max) {
+                character = null;
+            }
             break;
 
         case characterDisciplines().science:
-            character.science += 1;
+            character.science += increment;
+            if (character.science > max) {
+                character = null;
+            }
             break;
 
         case characterDisciplines().medicine:
-            character.medicine += 1;
+            character.medicine += increment;
+            if (character.medicine > max) {
+                character = null;
+            }
             break;
     }
     

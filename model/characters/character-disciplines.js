@@ -45,5 +45,22 @@ const randomDiscipline = () => {
     return discipline;
 }
 
+const randomDisciplineExcluding = (excludes) => {
+
+    let discipline = null;
+
+    do {
+
+        const candidate = randomDiscipline();
+        if (excludes.includes(candidate) == false) {
+            discipline = candidate;
+        }
+
+    } while (discipline == null);
+
+    return discipline;
+}
+
 module.exports.characterDisciplines = characterDisciplines;
 module.exports.randomDiscipline = randomDiscipline;
+module.exports.randomDisciplineExcluding = randomDisciplineExcluding;
