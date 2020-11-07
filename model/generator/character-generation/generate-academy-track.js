@@ -8,6 +8,7 @@ const { randomAcademyTrack } = require('../../characters/academy-tracks/academy-
 const { randomAttribute } = require('../../characters/character-attributes');
 const { randomDiscipline, randomDisciplineExcluding } = require('../../characters/character-disciplines');
 const { randomSelection } = require('../random-generator');
+const { generateTalent } = require('./generate-talent');
 
 const generateAcademyTrack = (sourceCharacter) => {
 
@@ -64,8 +65,13 @@ const generateAcademyTrack = (sourceCharacter) => {
     character.minors = [ minor1, minor2 ];
 
     // 5. Generate focus
-    const focus = randomSelection(academyTrack.focusOptions, character.focuses);
-    character.focuses = [...character.focuses, ...[focus]];
+    for (let i = 0; i < 3; i++) {
+        const focus = randomSelection(academyTrack.focusOptions, character.focuses);
+        character.focuses = [...character.focuses, ...[focus]];
+    }
+
+    // 6. Random Talent
+    character = generateTalent(character, character.species.talents);
 
     character.academyTrack = academyTrack;
 

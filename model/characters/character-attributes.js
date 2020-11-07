@@ -61,7 +61,6 @@ const randomAttributeExclude = (excludeThese) => {
     return found;
 }
 
-
 const getAttributeValue = (character, attributeName) => {
 
     let value = 0;

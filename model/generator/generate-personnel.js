@@ -10,9 +10,17 @@ const generatePersonnel = (personnelInstruction) => {
 
     const generatedPersonnel = new GeneratedPersonnel();
 
-    for (let i = 0; i < personnelInstruction.number; i++) {
+    let created = 0;
 
-        generatedPersonnel.characters.push(generateCharacter(personnelInstruction.character));
+    while (created < personnelInstruction.number) {
+
+        // Note: candidate may be null if it could not be generated according to the rules,
+        //       so have another go until we get a valid character.
+        const candidate = generateCharacter(personnelInstruction.character);
+        if (candidate != null) {
+            generatedPersonnel.characters.push(candidate);
+            created++;
+        }
     }
 
     return generatedPersonnel;
