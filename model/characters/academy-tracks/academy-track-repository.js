@@ -2,11 +2,15 @@
 
 const { getRandomInt } = require("../../misc");
 const { commandTrack } = require("./command-track");
+const { operationsTrack } = require("./operations-track");
+const { sciencesTrack } = require("./sciences-track");
 
 const getAllAcademyTracks = () => {
 
     return [
-         commandTrack()
+         commandTrack(),
+         operationsTrack(),
+         sciencesTrack()
     ];
 }
 
