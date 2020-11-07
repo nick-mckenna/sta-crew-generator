@@ -3,6 +3,7 @@
 const { deepClone } = require('../../misc');
 const { randomCareer } = require('../../characters/careers/career-repository');
 const { randomValue } = require('../../characters/values/value-repository');
+const { generateTalent } = require('./generate-talent');
 
 const generateCareer = (sourceCharacter) => {
 
@@ -16,7 +17,11 @@ const generateCareer = (sourceCharacter) => {
     character.values = randomValue(character.values);
 
     // 2. Add a talent
-    character.talents = [...character.talents, ...[career.talent]];
+    let talent = career.talent;
+    if (career.talent == null) {
+        talent = generateTalent(character, character.species.talents);
+    }
+    character.talents = [...character.talents, ...[talent]];
 
     character.career = career;
 
