@@ -73,7 +73,7 @@ const allValues = [
     'Strength in the face of certain defeat is the greatest of virtues',
     'Team wor makes the dream work',
     'Simplicity is the ultimate sophistication',
-    'Doing things with style is more important thn doing them well',
+    'Doing things with style is more important than doing them well',
     'Rely on yourself - others cannot be trusted',
     'Use your head before your heart or your gut',
     'Always go with your gut',
@@ -120,7 +120,7 @@ const randomValue = (currentValues) => {
         }
     }
 
-    return [...found, ...currentValues];
+    return [...[found], ...currentValues];
 }
 
 module.exports.randomValue = randomValue;

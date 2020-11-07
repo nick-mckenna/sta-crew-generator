@@ -13,10 +13,12 @@ class Character {
     upbringingName = "unknown";
     upbringingStatus = "unknown";
     academyTrackName = "unknown";
+    careerName = "unknown";
     species = null;
     environment = null;
     upbringing = null;
     academyTrack = null;
+    career = null;
 
     major = 'unknown';
     minors = [];

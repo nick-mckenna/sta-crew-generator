@@ -23,7 +23,7 @@ const commandTrack = () => {
         'Starfleet Protocols',
         'Team Dynamics'
     ];
-    track.majors = [ characterDisciplines().command, characterDisciplines().command ];
+    track.majors = [ characterDisciplines().command, characterDisciplines().conn ];
     track.minors = [ characterDisciplines().engineering, characterDisciplines().medicine,
         characterDisciplines().science, characterDisciplines().security, characterDisciplines().command,
         characterDisciplines().conn ];
