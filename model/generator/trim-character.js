@@ -11,6 +11,7 @@ const trimCharacter = (source) => {
     delete clone.upbringing;
     delete clone.academyTrack;
     delete clone.career;
+    delete clone.careerEvents;
 
     const talentNames = [];
 

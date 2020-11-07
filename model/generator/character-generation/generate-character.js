@@ -8,6 +8,7 @@ const { generateUpbringing } = require("./generate-upbringing");
 const { generateAcademyTrack } = require("./generate-academy-track");
 const { generateCareer } = require("./generate-career");
 const { trimCharacter } = require("../trim-character");
+const { generateCareerEvent } = require("./generate-career-event");
 
 const generateCharacter = (characterInstruction) => {
 
@@ -19,6 +20,7 @@ const generateCharacter = (characterInstruction) => {
     character = generateUpbringing(character);
     character = generateAcademyTrack(character);
     character = generateCareer(character);
+    character = generateCareerEvent(character);
 
     // TODO: At end of process, make sure we are within attribute / discipline boundaries
     

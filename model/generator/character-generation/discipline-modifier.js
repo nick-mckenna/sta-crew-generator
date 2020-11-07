@@ -3,11 +3,11 @@
 const { characterDisciplines, randomDiscipline } = require("../../characters/character-disciplines");
 const { deepClone } = require("../../misc");
 
-const modifyDiscipline = (sourceCharacter, attributeName, increment = 1, max = 999) => {
+const modifyDiscipline = (sourceCharacter, discipleName, increment = 1, max = 999) => {
 
     let character = deepClone(sourceCharacter);
 
-    switch (attributeName) {
+    switch (discipleName) {
 
         case characterDisciplines().command:
             character.command += increment;

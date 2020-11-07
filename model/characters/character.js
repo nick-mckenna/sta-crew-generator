@@ -19,9 +19,11 @@ class Character {
     upbringing = null;
     academyTrack = null;
     career = null;
+    careerEventNames = [];
 
     major = 'unknown';
     minors = [];
+    careerEvents = [];
     
     control = 7;
     fitness = 7;
