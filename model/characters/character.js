@@ -39,6 +39,8 @@ class Character {
     engineering = 1;
     medicine = 1;
 
+    stress = 8;
+
     traits = [];
     talents = [];
     values = [];

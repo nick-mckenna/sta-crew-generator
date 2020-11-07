@@ -61,6 +61,80 @@ const randomAttributeExclude = (excludeThese) => {
     return found;
 }
 
+
+const getAttributeValue = (character, attributeName) => {
+
+    let value = 0;
+
+    if (attributeName === characterAttributes().control) {
+        value = character.control;
+    }
+    if (attributeName === characterAttributes().daring) {
+        value = character.daring;
+    }
+    if (attributeName === characterAttributes().fitness) {
+        value = character.fitness;
+    }
+    if (attributeName === characterAttributes().insight) {
+        value = character.insight;
+    }
+    if (attributeName === characterAttributes().presence) {
+        value = character.presence;
+    }
+    if (attributeName === characterAttributes().reason) {
+        value = character.reason;
+    }
+
+    return value;
+}
+
+const incremementAttributeValue = (character, attributeName) => {
+
+    if (attributeName === characterAttributes().control) {
+        character.control++;
+    }
+    if (attributeName === characterAttributes().daring) {
+        character.daring++;
+    }
+    if (attributeName === characterAttributes().fitness) {
+        character.fitness++;
+    }
+    if (attributeName === characterAttributes().insight) {
+        character.insight++;
+    }
+    if (attributeName === characterAttributes().presence) {
+        character.presence++;
+    }
+    if (attributeName === characterAttributes().reason) {
+        character.reason++;
+    }
+}
+
+const decremementAttributeValue = (character, attributeName) => {
+
+    if (attributeName === characterAttributes().control) {
+        character.control--;
+    }
+    if (attributeName === characterAttributes().daring) {
+        character.daring--;
+    }
+    if (attributeName === characterAttributes().fitness) {
+        character.fitness--;
+    }
+    if (attributeName === characterAttributes().insight) {
+        character.insight--;
+    }
+    if (attributeName === characterAttributes().presence) {
+        character.presence--;
+    }
+    if (attributeName === characterAttributes().reason) {
+        character.reason--;
+    }
+}
+
 module.exports.characterAttributes = characterAttributes;
 module.exports.randomAttribute = randomAttribute;
 module.exports.randomAttributeExclude = randomAttributeExclude;
+module.exports.getAttributeValue = getAttributeValue;
+module.exports.incremementAttributeValue = incremementAttributeValue;
+module.exports.decremementAttributeValue = decremementAttributeValue;

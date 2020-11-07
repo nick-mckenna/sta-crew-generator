@@ -9,6 +9,7 @@ const { generateAcademyTrack } = require("./generate-academy-track");
 const { generateCareer } = require("./generate-career");
 const { trimCharacter } = require("../trim-character");
 const { generateCareerEvent } = require("./generate-career-event");
+const { generateFinalTouches } = require("./generate-final-touches");
 
 const generateCharacter = (characterInstruction) => {
 
@@ -21,10 +22,16 @@ const generateCharacter = (characterInstruction) => {
     character = generateAcademyTrack(character);
     character = generateCareer(character);
     character = generateCareerEvent(character);
+    character = generateFinalTouches(character);
 
-    // TODO: At end of process, make sure we are within attribute / discipline boundaries
-    
-    // TODO: Make sure that the character has high enough disciplines for their Talents
+
+    // TODO: Add a call to test character here to make sure everything is working as expected
+    // character = testCharacter(character);
+
+
+    // TODO: If we cannot successfully test a character (which is possible if we couldn't generate all the data we needed)
+    //       then return null and the caller should decide what to do about it.
+
 
     // Note: Remove the trimCharacter call if you want to get a bit more debug information
     // about why the character is the way that it is
