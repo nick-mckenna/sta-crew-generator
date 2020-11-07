@@ -26,12 +26,12 @@ const generateUpbringing = (sourceCharacter) => {
     character = modifyAttributes(character, attributesToUpdate);
     
     // 2. Update one of the disciplines
-    const disciplineOptions = upbringing.disciplinesToIncrease();
+    const disciplineOptions = upbringing.disciplinesToIncrease;
     const disciplineToIncrease = disciplineOptions[getRandomInt(disciplineOptions.length)];
     character = modifyDiscipline(character, disciplineToIncrease);
 
     // 3. Generate a random focus
-    const focusOptions = upbringingName.focusOptions;
+    const focusOptions = upbringing.focuses;
     const selectedFocus = focusOptions[getRandomInt(focusOptions.length)];
     character.focuses = [...character.focuses, ...[selectedFocus]];
 

@@ -5,6 +5,7 @@ const { validateCharacterInstruction } = require("../../instructions/character-i
 const { generateSpecies } = require("./generate-species");
 const { generateEnvironment } = require("./generate-environment");
 const { generateUpbringing } = require("./generate-upbringing");
+const { generateAcademyTrack } = require("./generate-academy-track");
 
 const generateCharacter = (characterInstruction) => {
 
@@ -14,7 +15,8 @@ const generateCharacter = (characterInstruction) => {
     character = generateSpecies(character);
     character = generateEnvironment(character);
     character = generateUpbringing(character);
-    ;
+    character = generateAcademyTrack(character);
+    
 
     // TODO: At end of process, make sure we are within attribute / discipline boundaries
     

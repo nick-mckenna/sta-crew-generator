@@ -1,5 +1,6 @@
 'use strict';
 
+const { characterAttributes } = require("../character-attributes");
 const { characterDisciplines } = require("../character-disciplines");
 const { Upbringing, randomAcceptanceOption } = require("./upbringing");
 

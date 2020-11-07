@@ -3,13 +3,13 @@
 const { Environment } = require("./environment");
 const { getRandomInt } = require("./../../misc");
 const { characterDisciplines, randomDiscipline } = require("../character-disciplines");
+const { otherRandomSpecies } = require("./../species/species-repository")
 
 const anotherSpeciesWorld = () => {
 
     let environment = new Environment();
 
     environment.name = 'Another Species\' World';
-    
     
     environment.getAttributeToIncrease = (species) => {
 

@@ -47,9 +47,9 @@ const generateAcademyTrack = (sourceCharacter) => {
 
         count++;
 
-        // Have ten goes and then accept whatever result comes back even if
+        // Have twenty goes and then accept whatever result comes back even if
         // it breaks the max 4 rule
-        if (count == 10 && found == false) {
+        if (count == 20 && found == false) {
             found = true;
             character = revisedCharacter;
         }
@@ -72,4 +72,4 @@ const generateAcademyTrack = (sourceCharacter) => {
     return character;
 }
 
-module.exports.generateEnvironment = generateEnvironment;
+module.exports.generateAcademyTrack = generateAcademyTrack;
