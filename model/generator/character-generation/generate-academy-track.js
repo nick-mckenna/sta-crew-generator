@@ -71,7 +71,8 @@ const generateAcademyTrack = (sourceCharacter) => {
     }
 
     // 6. Random Talent
-    character = generateTalent(character, character.species.talents);
+    const talent = generateTalent(character, character.species.talents);
+    character.talents = [...character.talents, ...[talent]];
 
     character.academyTrack = academyTrack;
 

@@ -136,6 +136,6 @@ const decremementDisciplineValue = (character, disciplineName) => {
 module.exports.characterDisciplines = characterDisciplines;
 module.exports.randomDiscipline = randomDiscipline;
 module.exports.randomDisciplineExcluding = randomDisciplineExcluding;
-module.exports.getAttributeValue = getAttributeValue;
+module.exports.getDisciplineValue = getDisciplineValue;
 module.exports.incremementDisciplineValue = incremementDisciplineValue;
 module.exports.decremementDisciplineValue = decremementDisciplineValue;

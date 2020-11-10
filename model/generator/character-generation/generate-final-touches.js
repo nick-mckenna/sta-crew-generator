@@ -3,7 +3,9 @@
 const { randomAttributeExclude, incremementAttributeValue } = require("../../characters/character-attributes");
 const { randomDisciplineExcluding, incremementDisciplineValue } = require("../../characters/character-disciplines");
 const { randomValue } = require("../../characters/values/value-repository");
+const { deepClone } = require("../../misc");
 const { settleDisciplines } = require("./settle-disciplines");
+const { settleAttributes } = require("./settle-attributes");
 
 const generateFinalTouches = (sourceCharacter) => {
 

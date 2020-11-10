@@ -26,17 +26,17 @@ const generateCharacter = (characterInstruction) => {
     character = generateFinalTouches(character);
 
     // Add a call to test character here to make sure everything is working as expected
-    character = testCharacter(character);
+    const finalCharacter = testCharacter(character);
 
-    if (character == null) {
+    if (finalCharacter == null) {
 
-        return null;
+        return character;
 
     } else {
         
         // Note: Remove the trimCharacter call if you want to get a bit more debug information
         // about why the character is the way that it is
-        character = trimCharacter(character);
+        character = trimCharacter(finalCharacter);
 
         return character;
     }    

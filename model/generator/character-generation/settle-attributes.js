@@ -144,7 +144,7 @@ const settleAttributesUntappedPotential = (sourceCharacter) => {
 
 const settleAttributes = (character) => {
 
-    if (character.talents.find('Untapped Potential') == null) {
+    if (character.talents.find(element => element.name === 'Untapped Potential') == null) {
         return settleAttributesStandard(character);
     } else {
         return settleAttributesUntappedPotential(character);

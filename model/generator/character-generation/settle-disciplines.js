@@ -8,22 +8,22 @@ const findDisciplinesAtMax = (character, max) => {
     let disciplinesAtMax = [];
 
     if (character.control === max) {
-        disciplinesAtMax.push(characterDisciplines().control);
+        disciplinesAtMax.push(characterDisciplines().command);
     }
     if (character.daring === max) {
-        disciplinesAtMax.push(characterDisciplines().daring);
+        disciplinesAtMax.push(characterDisciplines().conn);
     }
     if (character.fitness === max) {
-        disciplinesAtMax.push(characterDisciplines().fitness);
+        disciplinesAtMax.push(characterDisciplines().security);
     }
     if (character.insight === max) {
-        disciplinesAtMax.push(characterDisciplines().insight);
+        disciplinesAtMax.push(characterDisciplines().engineering);
     }
     if (character.presence === max) {
-        disciplinesAtMax.push(characterDisciplines().presence);
+        disciplinesAtMax.push(characterDisciplines().science);
     }
     if (character.reason === max) {
-        disciplinesAtMax.push(characterDisciplines().reason);
+        disciplinesAtMax.push(characterDisciplines().medicine);
     }
 
     return disciplinesAtMax;
@@ -33,34 +33,34 @@ const reduceAllToMax = (character, max) => {
 
     let pointsToAllocate = 0;
 
-    if (character.control > max) {
-        const diff = max - character.control;
-        character.control = max;
+    if (character.command > max) {
+        const diff = max - character.command;
+        character.command = max;
         pointsToAllocate += diff;
     }
-    if (character.daring > max) {
-        const diff = max - character.daring;
-        character.daring = max;
+    if (character.conn > max) {
+        const diff = max - character.conn;
+        character.conn = max;
         pointsToAllocate += diff;
     }
-    if (character.fitness > max) {
-        const diff = max - character.fitness;
-        character.fitness = max;
+    if (character.security > max) {
+        const diff = max - character.security;
+        character.security = max;
         pointsToAllocate += diff;
     }
-    if (character.insight > max) {
-        const diff = max - character.insight;
-        character.insight = max;
+    if (character.engineering > max) {
+        const diff = max - character.engineering;
+        character.engineering = max;
         pointsToAllocate += diff;
     }
-    if (character.presence > max) {
-        const diff = max - character.presence;
-        character.presence = max;
+    if (character.science > max) {
+        const diff = max - character.science;
+        character.science = max;
         pointsToAllocate += diff;
     }
-    if (character.reason > max) {
-        const diff = max - character.reason;
-        character.reason = max;
+    if (character.medicine > max) {
+        const diff = max - character.medicine;
+        character.medicine = max;
         pointsToAllocate += diff;
     }
 
@@ -144,7 +144,7 @@ const settleDisciplinesUntappedPotential = (sourceCharacter) => {
 
 const settleDisciplines = (character) => {
 
-    if (character.talents.find('Untapped Potential') == null) {
+    if (character.talents.find(element => element.name === 'Untapped Potential') == null) {
         return settleDisciplinesStandard(character);
     } else {
         return settleDisciplinesUntappedPotential(character);
