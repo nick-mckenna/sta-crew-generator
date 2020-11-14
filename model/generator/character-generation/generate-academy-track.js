@@ -60,8 +60,10 @@ const generateAcademyTrack = (sourceCharacter) => {
     // 4. Update minor disciplines
     let excludes = [ major ];
     const minor1 = randomDisciplineExcluding(excludes);
+    character = modifyDiscipline(character, minor1, 1);
     excludes = [...excludes, ...[minor1]];
     const minor2 = randomDisciplineExcluding(excludes);
+    character = modifyDiscipline(character, minor2, 1);
     character.minors = [ minor1, minor2 ];
 
     // 5. Generate focus

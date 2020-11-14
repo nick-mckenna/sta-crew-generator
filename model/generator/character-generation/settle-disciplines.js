@@ -34,32 +34,32 @@ const reduceAllToMax = (character, max) => {
     let pointsToAllocate = 0;
 
     if (character.command > max) {
-        const diff = max - character.command;
+        const diff = character.command - max;
         character.command = max;
         pointsToAllocate += diff;
     }
     if (character.conn > max) {
-        const diff = max - character.conn;
+        const diff = character.conn - max;
         character.conn = max;
         pointsToAllocate += diff;
     }
     if (character.security > max) {
-        const diff = max - character.security;
+        const diff = character.security - max;
         character.security = max;
         pointsToAllocate += diff;
     }
     if (character.engineering > max) {
-        const diff = max - character.engineering;
+        const diff = character.engineering - max;
         character.engineering = max;
         pointsToAllocate += diff;
     }
     if (character.science > max) {
-        const diff = max - character.science;
+        const diff = character.science - max;
         character.science = max;
         pointsToAllocate += diff;
     }
     if (character.medicine > max) {
-        const diff = max - character.medicine;
+        const diff = character.medicine - max;
         character.medicine = max;
         pointsToAllocate += diff;
     }

@@ -34,32 +34,32 @@ const reduceAllToMax = (character, max) => {
     let pointsToAllocate = 0;
 
     if (character.control > max) {
-        const diff = max - character.control;
+        const diff = character.control - max;
         character.control = max;
         pointsToAllocate += diff;
     }
     if (character.daring > max) {
-        const diff = max - character.daring;
+        const diff = character.daring - max;
         character.daring = max;
         pointsToAllocate += diff;
     }
     if (character.fitness > max) {
-        const diff = max - character.fitness;
+        const diff = character.fitness - max;
         character.fitness = max;
         pointsToAllocate += diff;
     }
     if (character.insight > max) {
-        const diff = max - character.insight;
+        const diff = character.insight - max;
         character.insight = max;
         pointsToAllocate += diff;
     }
     if (character.presence > max) {
-        const diff = max - character.presence;
+        const diff = character.presence - max;
         character.presence = max;
         pointsToAllocate += diff;
     }
     if (character.reason > max) {
-        const diff = max - character.reason;
+        const diff = character.reason - max;
         character.reason = max;
         pointsToAllocate += diff;
     }
@@ -101,6 +101,10 @@ const reallocatePoints = (character, absoluteMax, max, pointsToAllocate) => {
             }
             excludes.push(nextAttr);
             aborted = excludes.length === 6;
+
+            if (found === null && aborted === true) {
+                console.error('Aborted reallocate points.');
+            }
 
         } while (found === null && aborted === false);
     }

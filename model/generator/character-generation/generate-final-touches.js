@@ -41,7 +41,7 @@ const generateFinalTouches = (sourceCharacter) => {
 
     // 7. Ensure disciplines within limits
     character = settleDisciplines(character);
-    
+
     // 8. Set stress
     character.stress = character.fitness + character.security;
 
